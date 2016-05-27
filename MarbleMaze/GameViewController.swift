@@ -14,6 +14,14 @@ class GameViewController: UIViewController {
     
     var scnView: SCNView!
     var scnScene: SCNScene!
+    
+    let CollisionCategoryBall = 1
+    let CollisionCategoryStone = 2
+    let CollisionCategoryPillar = 4
+    let CollisionCategoryCrate = 8
+    let CollisionCategoryPearl = 16
+    
+    var ballNode: SCNNode!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +38,12 @@ class GameViewController: UIViewController {
         scnView.showsStatistics = true
         scnScene = SCNScene(named: "art.scnassets/game.scn")
         scnView.scene = scnScene
+        scnScene.physicsWorld.contactDelegate = self
     }
     
     func setupNodes() {
-        
+        ballNode = scnScene.rootNode.childNodeWithName("ball", recursively: true)!
+        ballNode.physicsBody?.contactTestBitMask = CollisionCategoryPillar | CollisionCategoryCrate | CollisionCategoryPearl
     }
     
     func setupSounds() {
@@ -52,5 +62,29 @@ class GameViewController: UIViewController {
 extension GameViewController: SCNSceneRendererDelegate {
     func renderer(renderer: SCNSceneRenderer, updateAtTime time: NSTimeInterval) {
         
+    }
+}
+
+extension GameViewController : SCNPhysicsContactDelegate {
+    func physicsWorld(world: SCNPhysicsWorld, didBeginContact contact:
+        SCNPhysicsContact) {
+        // 1
+        var contactNode:SCNNode!
+        if contact.nodeA.name == "ball" {
+            contactNode = contact.nodeB
+        } else {
+            contactNode = contact.nodeA
+        }
+        // 2
+        if contactNode.physicsBody?.categoryBitMask == CollisionCategoryPearl {
+            contactNode.hidden = true
+            contactNode.runAction(SCNAction.waitForDurationThenRunBlock(30) {
+                (node:SCNNode!) -> Void in
+                node.hidden = false
+            })
+        }
+        if contactNode.physicsBody?.categoryBitMask == CollisionCategoryPillar
+            || contactNode.physicsBody?.categoryBitMask == CollisionCategoryCrate {
+        }
     }
 }

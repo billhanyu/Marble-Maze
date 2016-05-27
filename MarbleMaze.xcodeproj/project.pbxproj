@@ -122,7 +122,7 @@
 				TargetAttributes = {
 					00E9A9441CF53DA600ABFE0B = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 3966BMHW6X;
+						DevelopmentTeam = AMBRY4G3QQ;
 					};
 				};
 			};
@@ -288,7 +288,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MarbleMaze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.billyu.MarbleMaze;
+				PRODUCT_BUNDLE_IDENTIFIER = com.billyu.shit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -302,7 +302,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MarbleMaze/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.billyu.MarbleMaze;
+				PRODUCT_BUNDLE_IDENTIFIER = com.billyu.shit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
