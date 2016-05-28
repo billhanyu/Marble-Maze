@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0053A6D41CF9589900645250 /* Bump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0053A6D01CF9589900645250 /* Bump.wav */; };
+		0053A6D51CF9589900645250 /* GameOver.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0053A6D11CF9589900645250 /* GameOver.wav */; };
+		0053A6D61CF9589900645250 /* Powerup.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0053A6D21CF9589900645250 /* Powerup.wav */; };
+		0053A6D71CF9589900645250 /* Reset.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0053A6D31CF9589900645250 /* Reset.wav */; };
 		006874CA1CF7E516004698F7 /* CoreMotionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006874C51CF7E516004698F7 /* CoreMotionHelper.swift */; };
 		006874CB1CF7E516004698F7 /* GameHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006874C61CF7E516004698F7 /* GameHelper.swift */; };
 		006874CC1CF7E516004698F7 /* GameUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006874C71CF7E516004698F7 /* GameUtils.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0053A6D01CF9589900645250 /* Bump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bump.wav; sourceTree = "<group>"; };
+		0053A6D11CF9589900645250 /* GameOver.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = GameOver.wav; sourceTree = "<group>"; };
+		0053A6D21CF9589900645250 /* Powerup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Powerup.wav; sourceTree = "<group>"; };
+		0053A6D31CF9589900645250 /* Reset.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Reset.wav; sourceTree = "<group>"; };
 		006874C51CF7E516004698F7 /* CoreMotionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreMotionHelper.swift; sourceTree = "<group>"; };
 		006874C61CF7E516004698F7 /* GameHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameHelper.swift; sourceTree = "<group>"; };
 		006874C71CF7E516004698F7 /* GameUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameUtils.swift; sourceTree = "<group>"; };
@@ -47,6 +55,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0053A6CF1CF9589900645250 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				0053A6D01CF9589900645250 /* Bump.wav */,
+				0053A6D11CF9589900645250 /* GameOver.wav */,
+				0053A6D21CF9589900645250 /* Powerup.wav */,
+				0053A6D31CF9589900645250 /* Reset.wav */,
+			);
+			name = Sounds;
+			path = GameUtils/Sounds;
+			sourceTree = "<group>";
+		};
 		006874C41CF7E516004698F7 /* GameUtils */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +101,7 @@
 				00E9A9481CF53DA600ABFE0B /* AppDelegate.swift */,
 				00E9A94C1CF53DA600ABFE0B /* GameViewController.swift */,
 				00E9A94E1CF53DA600ABFE0B /* Main.storyboard */,
+				0053A6CF1CF9589900645250 /* Sounds */,
 				006874C41CF7E516004698F7 /* GameUtils */,
 				00E9A95C1CF53DDE00ABFE0B /* art.scnassets */,
 				00E9A9511CF53DA600ABFE0B /* Assets.xcassets */,
@@ -149,7 +170,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0053A6D71CF9589900645250 /* Reset.wav in Resources */,
 				00E9A9551CF53DA600ABFE0B /* LaunchScreen.storyboard in Resources */,
+				0053A6D41CF9589900645250 /* Bump.wav in Resources */,
+				0053A6D61CF9589900645250 /* Powerup.wav in Resources */,
+				0053A6D51CF9589900645250 /* GameOver.wav in Resources */,
 				00E9A95D1CF53DDE00ABFE0B /* art.scnassets in Resources */,
 				00E9A9521CF53DA600ABFE0B /* Assets.xcassets in Resources */,
 				00E9A9501CF53DA600ABFE0B /* Main.storyboard in Resources */,

@@ -22,6 +22,10 @@ class GameViewController: UIViewController {
     let CollisionCategoryPearl = 16
     
     var ballNode: SCNNode!
+    
+    var game = GameHelper.sharedInstance
+    var mostion = CoreMotionHelper();
+    var motionForce = SCNVector3(x: 0, y: 0, z: 0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
